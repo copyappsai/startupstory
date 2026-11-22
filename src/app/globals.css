@@ -2,13 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
-  --brand-blue: #0066FF;
-  --brand-blue-hover: #0052CC;
-  --brand-blue-light: #EFF6FF;
-  --brand-blue-border: #DBEAFE;
-  --brand-navy: #0F172A;
-  --brand-muted: #64748B;
+  --foreground: #101B3A;
+  --brand-blue: #1455F5;
+  --brand-blue-hover: #0E43C7;
+  --brand-blue-light: #EAF1FF;
+  --brand-blue-border: #D6E4FF;
+  --brand-navy: #101B3A;
+  --brand-muted: #53627D;
   --card-border: #E2E8F0;
 }
 
@@ -26,7 +26,7 @@ body {
 
 /* Accessible focus visible styles */
 *:focus-visible {
-  outline: 2px solid #0066FF;
+  outline: 2px solid #1455F5;
   outline-offset: 2px;
 }
 
@@ -40,15 +40,15 @@ body {
   }
 }
 
-/* Custom subtle shadow matching reference */
+/* Custom subtle shadows */
 .shadow-soft {
-  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  box-shadow: 0 4px 20px -2px rgba(16, 27, 58, 0.05), 0 2px 6px -1px rgba(16, 27, 58, 0.02);
 }
 
 .shadow-card {
-  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 10px 30px -4px rgba(16, 27, 58, 0.07), 0 4px 12px -2px rgba(16, 27, 58, 0.03);
 }
 
 .shadow-highlight {
-  box-shadow: 0 16px 36px -6px rgba(0, 102, 255, 0.12), 0 6px 16px -3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 16px 36px -6px rgba(20, 85, 245, 0.15), 0 6px 16px -3px rgba(16, 27, 58, 0.04);
 }

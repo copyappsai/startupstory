@@ -20,25 +20,25 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenManage }: Foo
           </div>
 
           {/* Links & Copyright on the right */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm text-[#64748B]">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm text-[#53627D]">
             <button
               type="button"
               onClick={onOpenPrivacy}
-              className="hover:text-[#0F172A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded px-1"
+              className="hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1 cursor-pointer"
             >
               Privacy Policy
             </button>
             <button
               type="button"
               onClick={onOpenTerms}
-              className="hover:text-[#0F172A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded px-1"
+              className="hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1 cursor-pointer"
             >
               Terms
             </button>
             <button
               type="button"
               onClick={onOpenManage}
-              className="hover:text-[#0F172A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded px-1 text-[#0066FF]"
+              className="hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1 text-[#1455F5] font-medium cursor-pointer"
             >
               Manage subscription
             </button>

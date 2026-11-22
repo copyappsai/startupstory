@@ -132,7 +132,7 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
           type="button"
           onClick={onClose}
           aria-label="Close dialog"
-          className="absolute top-5 right-5 p-2 rounded-xl text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF]"
+          className="absolute top-5 right-5 p-2 rounded-xl text-[#53627D] hover:text-[#101B3A] hover:bg-[#F1F5F9] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
@@ -141,23 +141,23 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
         {activeModal === 'privacy' && (
           <div className="space-y-4 text-left">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] text-[#0066FF] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-[#EAF1FF] text-[#1455F5] flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h3 id="modal-title" className="text-xl font-bold text-[#0F172A]">
+                <h3 id="modal-title" className="text-xl font-bold text-[#101B3A]">
                   Privacy Policy
                 </h3>
-                <p className="text-xs text-[#64748B]">Last updated: November 2026 (Pre-launch)</p>
+                <p className="text-xs text-[#53627D]">Last updated: November 2026 (Pre-launch)</p>
               </div>
             </div>
 
-            <div className="space-y-3 text-sm text-[#475569] leading-relaxed pt-2">
+            <div className="space-y-3 text-sm text-[#53627D] leading-relaxed pt-2">
               <p>
                 At <strong>StartupStory</strong>, we respect your privacy and are committed to being completely transparent about how we collect and use your data during our pre-launch phase.
               </p>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">1. Information We Collect</h4>
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">1. Information We Collect</h4>
               <p>
                 When you sign up on our pre-launch landing page, we collect:
               </p>
@@ -167,18 +167,18 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
                 <li>Hashed client connection metadata (used solely for spam and rate limit mitigation).</li>
               </ul>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">2. How We Use Your Information</h4>
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">2. How We Use Your Information</h4>
               <p>
                 We use your email address exclusively for sending <strong>one notification email when StartupStory officially launches</strong>. We will never sell, rent, or share your contact information with third-party advertisers or marketers.
               </p>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">3. Data Retention &amp; Rights</h4>
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">3. Data Retention &amp; Rights</h4>
               <p>
                 Under GDPR, CCPA, and global privacy standards, you have the right to inspect, export, or permanently delete your stored subscription record at any time. You can do so directly using our self-service &ldquo;Manage Subscription&rdquo; tool or by contacting our team.
               </p>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">4. Contact Information</h4>
-              <p className="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-xl text-xs text-[#64748B]">
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">4. Contact Information</h4>
+              <p className="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-xl text-xs text-[#53627D]">
                 <strong>Operator / Data Controller:</strong> [StartupStory Pre-Launch Team]<br />
                 <strong>Email Contact:</strong> [privacy@startupstory.tech]<br />
                 <strong>Jurisdiction:</strong> [Replace with operating jurisdiction / state / country]
@@ -190,39 +190,39 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
         {activeModal === 'terms' && (
           <div className="space-y-4 text-left">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] text-[#0066FF] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-[#EAF1FF] text-[#1455F5] flex items-center justify-center">
                 <FileText className="w-5 h-5" />
               </div>
               <div>
-                <h3 id="modal-title" className="text-xl font-bold text-[#0F172A]">
+                <h3 id="modal-title" className="text-xl font-bold text-[#101B3A]">
                   Terms of Service
                 </h3>
-                <p className="text-xs text-[#64748B]">Last updated: November 2026 (Pre-launch)</p>
+                <p className="text-xs text-[#53627D]">Last updated: November 2026 (Pre-launch)</p>
               </div>
             </div>
 
-            <div className="space-y-3 text-sm text-[#475569] leading-relaxed pt-2">
+            <div className="space-y-3 text-sm text-[#53627D] leading-relaxed pt-2">
               <p>
                 These Pre-Launch Terms govern your participation in the StartupStory waitlist and access to pre-launch materials.
               </p>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">1. Pre-Launch Status</h4>
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">1. Pre-Launch Status</h4>
               <p>
                 StartupStory is currently in active development. Waitlist registration does not guarantee immediate platform access or specific features. Preview posts displayed on the site are illustrative mockups to demonstrate expected platform conversations.
               </p>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">2. Community Standards</h4>
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">2. Community Standards</h4>
               <p>
                 Upon launch, members agree to share truthful experiences, respect fellow entrepreneurs, avoid spam or misleading self-promotion, and maintain a constructive environment for founder learning.
               </p>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">3. Limitation of Liability</h4>
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">3. Limitation of Liability</h4>
               <p>
                 The landing page is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis without warranties of any kind.
               </p>
 
-              <h4 className="font-semibold text-[#0F172A] text-base pt-2">4. Starter Contact Information</h4>
-              <p className="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-xl text-xs text-[#64748B]">
+              <h4 className="font-semibold text-[#101B3A] text-base pt-2">4. Starter Contact Information</h4>
+              <p className="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-xl text-xs text-[#53627D]">
                 <strong>Entity:</strong> [StartupStory Community Initiative]<br />
                 <strong>Support Contact:</strong> [terms@startupstory.tech]<br />
                 <strong>Legal Inquiries:</strong> [legal@startupstory.tech]
@@ -234,18 +234,18 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
         {(activeModal === 'about' || activeModal === 'how-it-works') && (
           <div className="space-y-4 text-left">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] text-[#0066FF] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-[#EAF1FF] text-[#1455F5] flex items-center justify-center">
                 <Sparkles className="w-5 h-5" />
               </div>
               <div>
-                <h3 id="modal-title" className="text-xl font-bold text-[#0F172A]">
+                <h3 id="modal-title" className="text-xl font-bold text-[#101B3A]">
                   {activeModal === 'about' ? 'About StartupStory' : 'How StartupStory Works'}
                 </h3>
-                <p className="text-xs text-[#64748B]">Building for genuine founders</p>
+                <p className="text-xs text-[#53627D]">Building for genuine founders</p>
               </div>
             </div>
 
-            <div className="space-y-4 text-sm text-[#475569] leading-relaxed pt-2">
+            <div className="space-y-4 text-sm text-[#53627D] leading-relaxed pt-2">
               <p>
                 Social feeds are filled with vanity revenue screenshots, overnight success stories, and sanitized highlight reels. The reality of building a business is much messier: sudden bugs, customer churn, pricing doubts, and late-night redesigns.
               </p>
@@ -254,19 +254,19 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
                 <div className="p-3.5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl space-y-1">
-                  <h4 className="font-bold text-[#0F172A] text-xs uppercase tracking-wider text-[#0066FF]">1. Share Real Journeys</h4>
-                  <p className="text-xs text-[#475569]">Post your daily or weekly updates, honest experiments, and transparent numbers.</p>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#1455F5]">1. Share Real Journeys</h4>
+                  <p className="text-xs text-[#53627D]">Post your daily or weekly updates, honest experiments, and transparent numbers.</p>
                 </div>
                 <div className="p-3.5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl space-y-1">
-                  <h4 className="font-bold text-[#0F172A] text-xs uppercase tracking-wider text-[#0066FF]">2. Learn From Real Failures</h4>
-                  <p className="text-xs text-[#475569]">Discover why features failed and what founders did to turn things around.</p>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#1455F5]">2. Learn From Real Failures</h4>
+                  <p className="text-xs text-[#53627D]">Discover why features failed and what founders did to turn things around.</p>
                 </div>
                 <div className="p-3.5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl space-y-1">
-                  <h4 className="font-bold text-[#0F172A] text-xs uppercase tracking-wider text-[#0066FF]">3. Get Constructive Peer Input</h4>
-                  <p className="text-xs text-[#475569]">Ask fellow builders for feedback on landing pages, pricing models, and onboarding flows.</p>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-[#1455F5]">3. Get Constructive Peer Input</h4>
+                  <p className="text-xs text-[#53627D]">Ask fellow builders for feedback on landing pages, pricing models, and onboarding flows.</p>
                 </div>
               </div>
-              <p className="text-xs text-[#64748B] pt-2">
+              <p className="text-xs text-[#94A3B8] pt-2">
                 We are finishing the pre-launch phase and preparing to invite early founders soon. Enter your email on the landing page to get your invite.
               </p>
             </div>
@@ -276,24 +276,24 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
         {activeModal === 'manage' && (
           <div className="space-y-4 text-left">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] text-[#0066FF] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-[#EAF1FF] text-[#1455F5] flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h3 id="modal-title" className="text-xl font-bold text-[#0F172A]">
+                <h3 id="modal-title" className="text-xl font-bold text-[#101B3A]">
                   Manage Your Subscription
                 </h3>
-                <p className="text-xs text-[#64748B]">Export or delete your data anytime (GDPR &amp; Privacy compliant)</p>
+                <p className="text-xs text-[#53627D]">Export or delete your data anytime (GDPR &amp; Privacy compliant)</p>
               </div>
             </div>
 
-            <div className="space-y-4 text-sm text-[#475569] pt-2">
+            <div className="space-y-4 text-sm text-[#53627D] pt-2">
               <p>
                 Enter your email address below to inspect your registered launch notification details, download your subscription record, or permanently delete your data.
               </p>
 
               <div className="space-y-2">
-                <label htmlFor="manage-email-input" className="block text-xs font-semibold text-[#0F172A]">
+                <label htmlFor="manage-email-input" className="block text-xs font-semibold text-[#101B3A]">
                   Email address
                 </label>
                 <input
@@ -302,7 +302,7 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
                   value={manageEmail}
                   onChange={(e) => setManageEmail(e.target.value)}
                   placeholder="founder@example.com"
-                  className="w-full px-4 py-2.5 bg-white border border-[#CBD5E1] rounded-xl text-sm text-[#0F172A] focus:border-[#0066FF] outline-none focus:ring-3 focus:ring-[#0066FF]/20"
+                  className="w-full px-4 py-2.5 bg-white border border-[#CBD5E1] rounded-xl text-sm text-[#101B3A] focus:border-[#1455F5] outline-none focus:ring-3 focus:ring-[#1455F5]/20"
                 />
               </div>
 
@@ -312,12 +312,12 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
                   type="button"
                   onClick={handleExport}
                   disabled={manageStatus === 'loading'}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#CBD5E1] hover:border-[#0066FF] hover:text-[#0066FF] text-[#0F172A] text-xs sm:text-sm font-medium rounded-xl transition-all cursor-pointer shadow-xs"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#CBD5E1] hover:border-[#1455F5] hover:text-[#1455F5] text-[#101B3A] text-xs sm:text-sm font-medium rounded-xl transition-all cursor-pointer shadow-xs"
                 >
                   {manageStatus === 'loading' ? (
-                    <Loader2 className="w-4 h-4 animate-spin text-[#0066FF]" />
+                    <Loader2 className="w-4 h-4 animate-spin text-[#1455F5]" />
                   ) : (
-                    <Download className="w-4 h-4 text-[#0066FF]" />
+                    <Download className="w-4 h-4 text-[#1455F5]" />
                   )}
                   Export my data
                 </button>
@@ -335,13 +335,13 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
 
               {/* Status messages */}
               {manageStatus === 'exported' && (
-                <div className="p-3.5 bg-[#EFF6FF] border border-[#BFDBFE] rounded-xl space-y-2 text-xs">
-                  <div className="flex items-center gap-2 text-[#1E40AF] font-semibold">
-                    <CheckCircle2 className="w-4 h-4 text-[#0066FF]" />
+                <div className="p-3.5 bg-[#EAF1FF] border border-[#D6E4FF] rounded-xl space-y-2 text-xs">
+                  <div className="flex items-center gap-2 text-[#1455F5] font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-[#1455F5]" />
                     <span>{manageMessage}</span>
                   </div>
                   {exportedData && (
-                    <div className="bg-white p-3 rounded-lg border border-[#E2E8F0] font-mono text-[11px] text-[#334155] overflow-x-auto space-y-1">
+                    <div className="bg-white p-3 rounded-lg border border-[#E2E8F0] font-mono text-[11px] text-[#53627D] overflow-x-auto space-y-1">
                       <div><strong>Email:</strong> {String(exportedData.email)}</div>
                       <div><strong>Consent Given:</strong> {String(exportedData.consentGiven)}</div>
                       <div><strong>Consent Timestamp:</strong> {String(exportedData.consentTimestamp)}</div>
@@ -352,7 +352,7 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
                   <button
                     type="button"
                     onClick={downloadJson}
-                    className="inline-flex items-center gap-1.5 text-xs text-[#0066FF] font-semibold underline hover:no-underline pt-1"
+                    className="inline-flex items-center gap-1.5 text-xs text-[#1455F5] font-semibold underline hover:no-underline pt-1 cursor-pointer"
                   >
                     <Download className="w-3.5 h-3.5" />
                     Download as JSON file
@@ -382,7 +382,7 @@ export default function LegalModals({ activeModal, initialEmail = '', onClose }:
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2 bg-[#F1F5F9] hover:bg-[#E2E8F0] text-[#0F172A] font-medium text-xs sm:text-sm rounded-xl transition-colors cursor-pointer"
+            className="px-5 py-2 bg-[#F1F5F9] hover:bg-[#E2E8F0] text-[#101B3A] font-medium text-xs sm:text-sm rounded-xl transition-colors cursor-pointer"
           >
             Close
           </button>

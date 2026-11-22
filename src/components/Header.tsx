@@ -34,7 +34,7 @@ export default function Header({
         {/* Brand Logo */}
         <a 
           href="#" 
-          className="group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded-lg p-1"
+          className="group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded-lg p-1"
           aria-label="StartupStory Home"
         >
           <Logo iconSize="md" />
@@ -46,14 +46,14 @@ export default function Header({
             <button
               type="button"
               onClick={onOpenAbout}
-              className="text-xs sm:text-sm font-medium text-[#475569] hover:text-[#0F172A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded px-1.5 py-1"
+              className="text-xs sm:text-sm font-medium text-[#53627D] hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1.5 py-1 cursor-pointer"
             >
               About
             </button>
             <button
               type="button"
               onClick={onOpenHowItWorks}
-              className="text-xs sm:text-sm font-medium text-[#475569] hover:text-[#0F172A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded px-1.5 py-1"
+              className="text-xs sm:text-sm font-medium text-[#53627D] hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1.5 py-1 cursor-pointer"
             >
               How it works
             </button>
@@ -62,7 +62,7 @@ export default function Header({
           <a
             href="#signup-section"
             onClick={handleScrollToSignup}
-            className="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-[#0066FF] hover:bg-[#0052CC] active:bg-[#0045B5] text-white text-xs sm:text-sm font-semibold rounded-xl shadow-xs hover:shadow-sm transition-all focus-visible:ring-4 focus-visible:ring-[#0066FF]/25 whitespace-nowrap"
+            className="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-[#1455F5] hover:bg-[#0E43C7] active:bg-[#0A339E] text-white text-xs sm:text-sm font-semibold rounded-xl shadow-xs hover:shadow-sm transition-all focus-visible:ring-4 focus-visible:ring-[#1455F5]/25 whitespace-nowrap cursor-pointer"
           >
             Get launch updates
           </a>

@@ -1,12 +1,48 @@
 import React from 'react';
-import { Heart, MessageSquare, Bookmark } from 'lucide-react';
+
+function HeartIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4">
+      <path
+        d="M20.8 8.8c0 4.2-8.8 10-8.8 10S3.2 13 3.2 8.8A4.5 4.5 0 0 1 12 6.4a4.5 4.5 0 0 1 8.8 2.4Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function CommentIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4">
+      <path
+        d="M20.5 11.5a8 8 0 0 1-8.5 8 9 9 0 0 1-4-.9L3 20l1.5-4A7.5 7.5 0 0 1 3.5 12c0-4.4 3.8-8 8.5-8s8.5 3.1 8.5 7.5Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function BookmarkIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4">
+      <path
+        d="M6 4.5h12v16l-6-4-6 4v-16Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 interface PreviewPost {
   name: string;
   role: string;
-  avatarColor: string;
-  avatarInitial: string;
-  avatarSvg?: React.ReactNode;
+  avatarSvg: React.ReactNode;
   headline: string;
   body: string;
   likes: number;
@@ -17,8 +53,6 @@ const previewPosts: PreviewPost[] = [
   {
     name: 'Maya Park',
     role: 'Founder · Building Taskly',
-    avatarColor: '#FDF2F8',
-    avatarInitial: 'MP',
     avatarSvg: (
       <svg viewBox="0 0 36 36" className="w-full h-full">
         <circle cx="18" cy="18" r="18" fill="#FCE7F3" />
@@ -34,8 +68,6 @@ const previewPosts: PreviewPost[] = [
   {
     name: 'Rohan Mehta',
     role: 'Founder · Building DataLens',
-    avatarColor: '#EFF6FF',
-    avatarInitial: 'RM',
     avatarSvg: (
       <svg viewBox="0 0 36 36" className="w-full h-full">
         <circle cx="18" cy="18" r="18" fill="#DBEAFE" />
@@ -51,8 +83,6 @@ const previewPosts: PreviewPost[] = [
   {
     name: 'Elena Rossi',
     role: 'Founder · Building NoteSpace',
-    avatarColor: '#F0FDF4',
-    avatarInitial: 'ER',
     avatarSvg: (
       <svg viewBox="0 0 36 36" className="w-full h-full">
         <circle cx="18" cy="18" r="18" fill="#DCFCE7" />
@@ -75,11 +105,11 @@ export default function CommunityPreview() {
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-14">
           <h2
             id="preview-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#0F172A]"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#101B3A]"
           >
             A preview of what&apos;s coming
           </h2>
-          <p className="mt-2.5 text-sm sm:text-base text-[#64748B]">
+          <p className="mt-2.5 text-sm sm:text-base text-[#53627D]">
             A look at the kind of conversations you&apos;ll find on StartupStory.
           </p>
         </div>
@@ -99,45 +129,45 @@ export default function CommunityPreview() {
                       {post.avatarSvg}
                     </div>
                     <div className="min-w-0">
-                      <h4 className="font-semibold text-sm text-[#0F172A] leading-tight truncate">
+                      <h4 className="font-semibold text-sm text-[#101B3A] leading-tight truncate">
                         {post.name}
                       </h4>
-                      <p className="text-xs text-[#64748B] truncate">{post.role}</p>
+                      <p className="text-xs text-[#53627D] truncate">{post.role}</p>
                     </div>
                   </div>
 
-                  {/* Preview Badge matching reference image */}
-                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#EFF6FF] text-[#0066FF] border border-[#DBEAFE] shrink-0">
+                  {/* Preview Badge with #EAF1FF */}
+                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#EAF1FF] text-[#1455F5] border border-[#D6E4FF] shrink-0">
                     Preview
                   </span>
                 </div>
 
                 {/* Post Title */}
-                <h3 className="font-bold text-[15px] sm:text-base text-[#0F172A] mb-2 leading-snug">
+                <h3 className="font-bold text-[15px] sm:text-base text-[#101B3A] mb-2 leading-snug">
                   {post.headline}
                 </h3>
 
                 {/* Post Body Snippet */}
-                <p className="text-sm text-[#475569] leading-relaxed line-clamp-4">
+                <p className="text-sm text-[#53627D] leading-relaxed line-clamp-4">
                   {post.body}
                 </p>
               </div>
 
-              {/* Card Footer Reactions */}
-              <div className="flex items-center justify-between pt-4 mt-6 border-t border-[#F1F5F9] text-[#64748B] text-xs font-medium">
+              {/* Card Footer Reactions using official icon SVGs */}
+              <div className="flex items-center justify-between pt-4 mt-6 border-t border-[#F1F5F9] text-[#53627D] text-xs font-medium">
                 <div className="flex items-center gap-5">
-                  <div className="flex items-center gap-1.5 hover:text-[#0066FF] transition-colors cursor-default">
-                    <Heart className="w-4 h-4" />
+                  <div className="flex items-center gap-1.5 hover:text-[#1455F5] transition-colors cursor-default">
+                    <HeartIcon />
                     <span>{post.likes}</span>
                   </div>
-                  <div className="flex items-center gap-1.5 hover:text-[#0066FF] transition-colors cursor-default">
-                    <MessageSquare className="w-4 h-4" />
+                  <div className="flex items-center gap-1.5 hover:text-[#1455F5] transition-colors cursor-default">
+                    <CommentIcon />
                     <span>{post.comments}</span>
                   </div>
                 </div>
 
-                <div className="hover:text-[#0066FF] transition-colors cursor-default">
-                  <Bookmark className="w-4 h-4" />
+                <div className="hover:text-[#1455F5] transition-colors cursor-default">
+                  <BookmarkIcon />
                 </div>
               </div>
             </div>

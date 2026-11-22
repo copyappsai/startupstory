@@ -8,24 +8,13 @@ interface LogoProps {
 
 export function StartupStoryIcon({ className = 'w-9 h-9' }: { className?: string }) {
   return (
-    <div
-      className={`relative flex items-center justify-center rounded-xl bg-gradient-to-b from-[#0066FF] to-[#0055E0] shadow-sm text-white shrink-0 ${className}`}
-      aria-hidden="true"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-[60%] h-[60%] -rotate-12 translate-x-[0.5px] translate-y-[-0.5px]"
-      >
-        {/* Rocket ship body */}
-        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+    <div className={`relative flex items-center justify-center shrink-0 ${className}`} aria-hidden="true">
+      <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-xs">
+        <rect width="64" height="64" rx="16" fill="#1455F5" />
+        <path d="M20 39c1-9 6-18 17-25l8-3-1 9c-3 12-11 20-20 22l-6 1 2-4Z" fill="#fff" />
+        <circle cx="38" cy="22" r="4" fill="#1455F5" />
+        <path d="m19 41-7 11 12-6m-2-1-1 8 7-6" fill="#DCE8FF" />
+        <path d="M18 35c-4 1-7 4-8 8l8-2m16 7c-1 4-4 7-8 8l2-8" fill="#fff" />
       </svg>
     </div>
   );
@@ -48,7 +37,7 @@ export default function Logo({ className = '', iconSize = 'md', showText = true 
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
       <StartupStoryIcon className={sizeMap[iconSize]} />
       {showText && (
-        <span className={`font-bold tracking-tight text-[#0F172A] ${textMap[iconSize]}`}>
+        <span className={`font-bold tracking-tight text-[#101B3A] ${textMap[iconSize]}`}>
           StartupStory
         </span>
       )}
