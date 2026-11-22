@@ -2,27 +2,7 @@
 
 import React from 'react';
 import SignupForm from './SignupForm';
-
-function RocketBannerIcon() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" className="w-8 h-8 text-white">
-      <path
-        d="M34 12c-9 2-16 9-18 18l-2 9 9-2c9-2 16-9 18-18l2-9-9 2Z"
-        stroke="currentColor"
-        strokeWidth="3.2"
-        strokeLinejoin="round"
-      />
-      <circle cx="32" cy="25" r="4" stroke="currentColor" strokeWidth="3.2" />
-      <path
-        d="m17 37-7 8 11-1m16 5 8-7-1 11"
-        stroke="currentColor"
-        strokeWidth="3.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import { Rocket } from 'lucide-react';
 
 interface FinalSignupBannerProps {
   onOpenPrivacy?: () => void;
@@ -34,22 +14,22 @@ export default function FinalSignupBanner({
   onOpenManage,
 }: FinalSignupBannerProps) {
   return (
-    <section id="signup-section" className="py-12 md:py-16">
+    <section id="signup-section" className="py-10 md:py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#EAF1FF] border border-[#D6E4FF] rounded-3xl p-6 sm:p-8 md:p-12 shadow-soft">
+        <div className="bg-[#EEF4FF] border border-[#DBEAFE] rounded-3xl p-6 sm:p-8 md:p-10 shadow-xs">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-5 flex items-start gap-4">
-              {/* Rocket icon container */}
-              <div className="w-14 h-14 rounded-2xl bg-[#1455F5] text-white flex items-center justify-center shrink-0 shadow-sm">
-                <RocketBannerIcon />
+              {/* Rocket icon container in vibrant blue */}
+              <div className="w-13 h-13 rounded-2xl bg-[#0066FF] text-white flex items-center justify-center shrink-0 shadow-xs">
+                <Rocket className="w-6 h-6 stroke-[2.2] -rotate-12" />
               </div>
 
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#101B3A] leading-tight">
+                <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight text-[#0F172A] leading-tight">
                   Be the first to know when we launch.
                 </h2>
-                <p className="mt-2 text-sm sm:text-base text-[#53627D] leading-relaxed">
+                <p className="mt-1.5 text-xs sm:text-sm text-[#475569] leading-relaxed">
                   Get a notification when StartupStory goes live and start sharing your own founder story.
                 </p>
               </div>

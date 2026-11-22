@@ -11,41 +11,40 @@ interface FooterProps {
 
 export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenManage }: FooterProps) {
   return (
-    <footer className="border-t border-[#F1F5F9] bg-white py-10 transition-colors">
+    <footer className="bg-white py-8 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Logo on the left */}
           <div className="flex items-center gap-2">
             <Logo iconSize="sm" />
           </div>
 
-          {/* Links & Copyright on the right */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm text-[#53627D]">
+          {/* Links & Copyright on the right matching reference image */}
+          <div className="flex items-center gap-6 text-xs sm:text-[13px] text-[#475569]">
             <button
               type="button"
               onClick={onOpenPrivacy}
-              className="hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1 cursor-pointer"
+              className="hover:text-[#0F172A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded cursor-pointer"
             >
               Privacy Policy
             </button>
             <button
               type="button"
               onClick={onOpenTerms}
-              className="hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1 cursor-pointer"
+              className="hover:text-[#0F172A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded cursor-pointer"
             >
               Terms
             </button>
+            <span className="text-[#CBD5E1]" aria-hidden="true">
+              |
+            </span>
             <button
               type="button"
               onClick={onOpenManage}
-              className="hover:text-[#101B3A] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1 text-[#1455F5] font-medium cursor-pointer"
+              className="text-[#64748B] hover:text-[#0066FF] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded cursor-pointer"
             >
-              Manage subscription
+              © 2026 StartupStory
             </button>
-            <span className="text-[#CBD5E1] hidden sm:inline" aria-hidden="true">
-              |
-            </span>
-            <span>© 2026 StartupStory</span>
           </div>
         </div>
       </div>

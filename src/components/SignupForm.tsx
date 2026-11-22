@@ -1,17 +1,8 @@
 'use client';
 
 import React, { useState, useId } from 'react';
-import { CheckCircle2, AlertCircle, Info, Loader2 } from 'lucide-react';
+import { Mail, CheckCircle2, AlertCircle, Info, Loader2 } from 'lucide-react';
 import { SubscribeResponse } from '@/lib/types';
-
-function EmailIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-[#53627D]">
-      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
-      <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 interface SignupFormProps {
   idPrefix?: string;
@@ -117,18 +108,18 @@ export default function SignupForm({
     <div className={`w-full ${className}`}>
       {status === 'success' ? (
         <div 
-          className="rounded-2xl bg-white border border-[#D6E4FF] p-5 shadow-sm space-y-3 animate-in fade-in zoom-in-95 duration-200"
+          className="rounded-2xl bg-white border border-[#BFDBFE] p-5 shadow-xs space-y-3 animate-in fade-in zoom-in-95 duration-200"
           role="status"
           aria-live="polite"
         >
           <div className="flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-[#1455F5] mt-0.5 shrink-0" />
+            <CheckCircle2 className="w-5 h-5 text-[#0066FF] mt-0.5 shrink-0" />
             <div className="space-y-1">
-              <h4 className="font-semibold text-[#101B3A] text-sm sm:text-base">
+              <h4 className="font-semibold text-[#0F172A] text-sm sm:text-base">
                 You&apos;re on the launch list!
               </h4>
-              <p className="text-xs sm:text-sm text-[#53627D] leading-relaxed">
-                We recorded your request for <strong className="text-[#101B3A]">{submittedEmail}</strong> on {signupDate}. You will receive exactly one notification when StartupStory goes live.
+              <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
+                We recorded your request for <strong className="text-[#0F172A]">{submittedEmail}</strong> on {signupDate}. You will receive exactly one notification when StartupStory goes live.
               </p>
             </div>
           </div>
@@ -138,7 +129,7 @@ export default function SignupForm({
               <button
                 type="button"
                 onClick={() => onOpenManage(submittedEmail)}
-                className="text-[#1455F5] hover:underline font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-1"
+                className="text-[#0066FF] hover:underline font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded px-1 cursor-pointer"
               >
                 Manage or export your subscription data
               </button>
@@ -146,14 +137,14 @@ export default function SignupForm({
             <button
               type="button"
               onClick={handleReset}
-              className="text-[#53627D] hover:text-[#101B3A] transition-colors ml-auto font-medium"
+              className="text-[#64748B] hover:text-[#0F172A] transition-colors ml-auto font-medium cursor-pointer"
             >
               Add another email
             </button>
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} noValidate className="space-y-3">
+        <form onSubmit={handleSubmit} noValidate className="space-y-2.5">
           {/* Honeypot field for spam prevention */}
           <div className="hidden" aria-hidden="true">
             <label htmlFor={honeypotId}>Do not fill this field</label>
@@ -168,11 +159,11 @@ export default function SignupForm({
             />
           </div>
 
-          {/* Form Controls: Input + Button */}
+          {/* Form Controls: Input + Button side-by-side */}
           <div className="flex flex-col sm:flex-row gap-2.5 sm:items-center">
             <div className="relative flex-1">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#53627D]">
-                <EmailIcon />
+              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#94A3B8]">
+                <Mail className="w-4.5 h-4.5" />
               </div>
               <input
                 id={emailInputId}
@@ -188,14 +179,14 @@ export default function SignupForm({
                 placeholder="Enter your email address"
                 aria-label="Email address for launch notification"
                 aria-describedby={`${idPrefix}-disclaimer ${idPrefix}-status-message`}
-                className="w-full pl-11 pr-4 py-3 bg-white border border-[#CBD5E1] hover:border-[#94A3B8] focus:border-[#1455F5] rounded-xl text-sm sm:text-base text-[#101B3A] placeholder-[#94A3B8] shadow-xs outline-none focus:ring-4 focus:ring-[#1455F5]/15 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full pl-10.5 pr-4 py-2.5 sm:py-3 bg-white border border-[#CBD5E1] hover:border-[#94A3B8] focus:border-[#0066FF] rounded-xl text-sm sm:text-[15px] text-[#0F172A] placeholder-[#94A3B8] shadow-2xs outline-none focus:ring-4 focus:ring-[#0066FF]/15 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
               />
             </div>
 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#1455F5] hover:bg-[#0E43C7] active:bg-[#0A339E] text-white font-semibold text-sm sm:text-base rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed shrink-0 focus-visible:ring-4 focus-visible:ring-[#1455F5]/30"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#0066FF] hover:bg-[#0052CC] active:bg-[#0045B5] text-white font-medium text-sm sm:text-[15px] rounded-xl shadow-xs hover:shadow-sm transition-all cursor-pointer whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed shrink-0 focus-visible:ring-4 focus-visible:ring-[#0066FF]/30"
             >
               {status === 'loading' ? (
                 <>
@@ -209,8 +200,8 @@ export default function SignupForm({
           </div>
 
           {/* Consent Checkbox */}
-          <div className="flex items-start gap-2.5 pt-0.5">
-            <div className="flex items-center h-5">
+          <div className="flex items-start gap-2 pt-0.5">
+            <div className="flex items-center h-4.5">
               <input
                 id={consentId}
                 name="consent"
@@ -222,19 +213,19 @@ export default function SignupForm({
                   setConsent(e.target.checked);
                   if (status === 'error' && e.target.checked) setStatus('idle');
                 }}
-                className="w-4 h-4 text-[#1455F5] bg-white border-[#CBD5E1] rounded focus:ring-[#1455F5] focus:ring-2 cursor-pointer transition-colors"
+                className="w-3.5 h-3.5 text-[#0066FF] bg-white border-[#CBD5E1] rounded focus:ring-[#0066FF] focus:ring-1.5 cursor-pointer transition-colors"
               />
             </div>
             <label
               htmlFor={consentId}
-              className="text-xs sm:text-[13px] text-[#53627D] select-none leading-snug cursor-pointer"
+              className="text-xs sm:text-[12.5px] text-[#475569] select-none leading-snug cursor-pointer"
             >
               I agree to receive an email when StartupStory launches.{' '}
               {onOpenPrivacy && (
                 <button
                   type="button"
                   onClick={onOpenPrivacy}
-                  className="text-[#1455F5] hover:underline underline-offset-2 font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1455F5] rounded px-0.5"
+                  className="text-[#0066FF] hover:underline underline-offset-2 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF] rounded px-0.5"
                 >
                   Privacy Policy
                 </button>
@@ -245,9 +236,9 @@ export default function SignupForm({
           {/* Privacy Reassurance Note */}
           <div
             id={`${idPrefix}-disclaimer`}
-            className="text-[12px] text-[#53627D] flex items-center gap-1.5"
+            className="text-[11.5px] text-[#64748B]"
           >
-            <span>Only launch updates. Unsubscribe anytime.</span>
+            Only launch updates. Unsubscribe anytime.
           </div>
 
           {/* Duplicate Email State Notice */}
@@ -255,16 +246,16 @@ export default function SignupForm({
             <div
               id={`${idPrefix}-status-message`}
               role="status"
-              className="rounded-xl bg-[#EAF1FF] border border-[#D6E4FF] p-3 text-xs sm:text-sm text-[#1455F5] flex items-start gap-2.5 animate-in fade-in duration-200"
+              className="rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] p-3 text-xs sm:text-sm text-[#0066FF] flex items-start gap-2.5 animate-in fade-in duration-200"
             >
-              <Info className="w-4 h-4 text-[#1455F5] shrink-0 mt-0.5" />
+              <Info className="w-4 h-4 text-[#0066FF] shrink-0 mt-0.5" />
               <div className="space-y-1">
-                <p className="font-semibold text-[#101B3A]">{message}</p>
+                <p className="font-semibold text-[#0F172A]">{message}</p>
                 {onOpenManage && (
                   <button
                     type="button"
                     onClick={() => onOpenManage(submittedEmail)}
-                    className="text-[#1455F5] font-semibold underline hover:no-underline"
+                    className="text-[#0066FF] font-semibold underline hover:no-underline cursor-pointer"
                   >
                     View or export your saved details
                   </button>
